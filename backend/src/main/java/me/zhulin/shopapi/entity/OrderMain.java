@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -16,13 +17,11 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDateTimeConverter;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * OrderMain contains User info and products in the order
@@ -31,7 +30,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @DynamicUpdate
-@NoArgsConstructor
 public class OrderMain implements Serializable {
     private static final long serialVersionUID = -3819883511505235030L;
 
@@ -63,17 +61,22 @@ public class OrderMain implements Serializable {
 
     /**
      * default 0: new order.
-     */
+     */	
     @NotNull
     @ColumnDefault("0")
     private Integer orderStatus;
 
     //@CreationTimestamp
+    @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime createTime;
 
     //@UpdateTimestamp
+    @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime updateTime;
 
+    public OrderMain() {
+    	
+    }
     public OrderMain(User buyer) {
         this.buyerEmail = buyer.getEmail();
         this.buyerName = buyer.getName();

@@ -25,7 +25,6 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @Entity
-@NoArgsConstructor
 public class Cart implements Serializable {
     @Id
     @NotNull
@@ -55,4 +54,8 @@ public class Cart implements Serializable {
         this.user  = user;
     }
 
+    public Cart() {
+    	
+    }
+    
 }
