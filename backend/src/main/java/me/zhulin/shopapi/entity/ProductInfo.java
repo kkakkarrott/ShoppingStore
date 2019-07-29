@@ -55,9 +55,9 @@ public class ProductInfo implements Serializable {
     @ColumnDefault("0")
     private Integer categoryType;
 
-    @CreationTimestamp
+    //@CreationTimestamp
     private Date createTime;
-    @UpdateTimestamp
+    //@UpdateTimestamp
     private Date updateTime;
 
     public ProductInfo() {

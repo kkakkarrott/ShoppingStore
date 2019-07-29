@@ -41,7 +41,7 @@ public class OrderMain implements Serializable {
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.LAZY,
             mappedBy = "orderMain")
-    private Set products = new HashSet();
+    private Set<ProductInOrder> products = new HashSet<>();
 
     @NotEmpty
     private String buyerEmail;
@@ -66,10 +66,10 @@ public class OrderMain implements Serializable {
     @ColumnDefault("0")
     private Integer orderStatus;
 
-    @CreationTimestamp
+    //@CreationTimestamp
     private LocalDateTime createTime;
 
-    @UpdateTimestamp
+    //@UpdateTimestamp
     private LocalDateTime updateTime;
 
     public OrderMain(User buyer) {
