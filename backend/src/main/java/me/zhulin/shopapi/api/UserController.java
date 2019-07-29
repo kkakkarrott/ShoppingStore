@@ -56,7 +56,8 @@ public class UserController {
     @PostMapping("/register")
     public ResponseEntity<User> save(@RequestBody User user) {
         try {
-            return ResponseEntity.ok(userService.save(user));
+            ResponseEntity<User> response = ResponseEntity.ok(userService.save(user));
+        	return response;
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
