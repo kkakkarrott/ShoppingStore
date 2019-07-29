@@ -55,7 +55,6 @@ public class OrderMain implements Serializable {
     @NotEmpty
     private String buyerAddress;
 
-    // Total Amount
     @NotNull
     private BigDecimal orderAmount;
 
@@ -66,11 +65,9 @@ public class OrderMain implements Serializable {
     @ColumnDefault("0")
     private Integer orderStatus;
 
-    //@CreationTimestamp
     @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime createTime;
 
-    //@UpdateTimestamp
     @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime updateTime;
 

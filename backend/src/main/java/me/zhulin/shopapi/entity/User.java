@@ -15,20 +15,15 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.NaturalId;
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Created By Zhu Lin on 3/12/2018.
- */
 @Entity
 @Data
 @Table(name = "users")
-@EnableJpaRepositories(basePackages = "com.zxg.springdata", entityManagerFactoryRef = "factoryBean")
 @NoArgsConstructor
 public class User implements Serializable {
 
