@@ -1,20 +1,31 @@
 package me.zhulin.shopapi.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MapsId;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Created By Zhu Lin on 1/2/2019.
  */
 @Data
 @Entity
+@NoArgsConstructor
 public class Cart implements Serializable {
     @Id
     @NotNull

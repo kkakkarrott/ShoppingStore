@@ -22,6 +22,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * OrderMain contains User info and products in the order
@@ -30,6 +31,7 @@ import lombok.Data;
 @Entity
 @Data
 @DynamicUpdate
+@NoArgsConstructor
 public class OrderMain implements Serializable {
     private static final long serialVersionUID = -3819883511505235030L;
 

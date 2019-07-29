@@ -26,6 +26,7 @@ import lombok.NoArgsConstructor;
  */
 @Entity
 @Data
+@NoArgsConstructor
 public class ProductInOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
