@@ -26,7 +26,6 @@ import lombok.NoArgsConstructor;
  */
 @Entity
 @Data
-@NoArgsConstructor
 public class ProductInOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -94,6 +93,10 @@ public class ProductInOrder {
         this.productPrice = productInfo.getProductPrice();
         this.productStock = productInfo.getProductStock();
         this.count = quantity;
+    }
+    
+    public ProductInOrder() {
+    	
     }
 
     @Override

@@ -13,16 +13,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * OrderMain contains User info and products in the order
@@ -31,7 +30,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @DynamicUpdate
-@NoArgsConstructor
 public class OrderMain implements Serializable {
     private static final long serialVersionUID = -3819883511505235030L;
 
@@ -63,7 +61,7 @@ public class OrderMain implements Serializable {
 
     /**
      * default 0: new order.
-     */
+     */	
     @NotNull
     @ColumnDefault("0")
     private Integer orderStatus;
@@ -74,6 +72,9 @@ public class OrderMain implements Serializable {
     //@UpdateTimestamp
     private LocalDateTime updateTime;
 
+    public OrderMain() {
+    	
+    }
     public OrderMain(User buyer) {
         this.buyerEmail = buyer.getEmail();
         this.buyerName = buyer.getName();
