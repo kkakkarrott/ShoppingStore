@@ -7,19 +7,19 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDateTimeConverter;
 
 import lombok.Data;
 
@@ -67,9 +67,11 @@ public class OrderMain implements Serializable {
     private Integer orderStatus;
 
     //@CreationTimestamp
+    @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime createTime;
 
     //@UpdateTimestamp
+    @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime updateTime;
 
     public OrderMain() {
