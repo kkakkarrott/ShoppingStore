@@ -25,6 +25,7 @@ import {MatDialogModule} from '@angular/material';
 import {MatCardModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
 import {ChatModule} from './chat/chat.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import {ChatModule} from './chat/chat.module';
         ChatModule,
         MatCardModule,
         MatButtonModule,
-        MatDialogModule
+        MatDialogModule,
+        BrowserAnimationsModule
 
     ],
     providers: [CookieService,
