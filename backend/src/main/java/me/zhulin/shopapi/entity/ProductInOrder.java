@@ -19,11 +19,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-/**
- * Created By Zhu Lin on 3/14/2018.
- */
 @Entity
 @Data
 public class ProductInOrder {
@@ -32,7 +28,6 @@ public class ProductInOrder {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-//    @JoinColumn(name = "cart_id")
     @JsonIgnore
     private Cart cart;
 
@@ -41,48 +36,28 @@ public class ProductInOrder {
     @JsonIgnore
     private OrderMain orderMain;
 
-
     @NotEmpty
     private String productId;
 
-    /**
-     * 名字.
-     */
     @NotEmpty
     private String productName;
 
-    /**
-     * 描述.
-     */
     @NotNull
     private String productDescription;
 
-    /**
-     * 小图.
-     */
     private String productIcon;
 
-    /**
-     * 类目编号.
-     */
     @NotNull
     private Integer categoryType;
 
-    /**
-     * 单价.
-     */
     @NotNull
     private BigDecimal productPrice;
 
-    /**
-     * 库存.
-     */
     @Min(0)
     private Integer productStock;
 
     @Min(1)
     private Integer count;
-
 
     public ProductInOrder(ProductInfo productInfo, Integer quantity) {
         this.productId = productInfo.getProductId();
@@ -131,7 +106,6 @@ public class ProductInOrder {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(super.hashCode(), id, productId, productName, productDescription, productIcon, categoryType, productPrice);
     }
 }

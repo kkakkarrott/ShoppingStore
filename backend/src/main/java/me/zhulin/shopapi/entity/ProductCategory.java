@@ -1,23 +1,25 @@
 package me.zhulin.shopapi.entity;
 
-import lombok.Data;
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.NaturalId;
+import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.io.Serializable;
-import java.util.Date;
 
-/**
- * Created By Zhu Lin on 3/9/2018.
- */
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.NaturalId;
+
+import lombok.Data;
+
 @Entity
 @Data
 @DynamicUpdate
 public class ProductCategory implements Serializable {
-    @Id
+
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue
     private Integer categoryId;
 
@@ -32,6 +34,7 @@ public class ProductCategory implements Serializable {
 
 
     public ProductCategory() {
+    	
     }
 
     public ProductCategory(String categoryName, Integer categoryType) {

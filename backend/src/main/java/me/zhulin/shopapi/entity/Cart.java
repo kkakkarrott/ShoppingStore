@@ -18,11 +18,8 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-/**
- * Created By Zhu Lin on 1/2/2019.
- */
+
 @Data
 @Entity
 public class Cart implements Serializable {
@@ -34,7 +31,6 @@ public class Cart implements Serializable {
     @OneToOne(fetch = FetchType.LAZY)
     @MapsId
     @JsonIgnore
-//    @JoinColumn(name = "email", referencedColumnName = "email")
     private User user;
 
     @OneToMany(cascade = CascadeType.ALL,

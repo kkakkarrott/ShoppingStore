@@ -10,56 +10,43 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.Data;
 
-/**
- * Created By Zhu Lin on 3/10/2018.
- */
 @Entity
 @Data
 @DynamicUpdate
 public class ProductInfo implements Serializable {
-    @Id
-    private String productId;
 
-    /** 名字. */
-    @NotNull
-    private String productName;
+	private static final long serialVersionUID = 1L;
 
-    /** 单价. */
-    @NotNull
-    private BigDecimal productPrice;
+	@Id
+	private String productId;
 
-    /** 库存. */
-    @NotNull
-    @Min(0)
-    private Integer productStock;
+	@NotNull
+	private String productName;
 
-    /** 描述. */
-    private String productDescription;
+	@NotNull
+	private BigDecimal productPrice;
 
-    /** 小图. */
-    private String productIcon;
+	@NotNull
+	@Min(0)
+	private Integer productStock;
 
-    /** 0: on-sale 1: off-sale */
+	private String productDescription;
 
-    @ColumnDefault("0")
-    private Integer productStatus;
+	private String productIcon;
 
+	@ColumnDefault("0")
+	private Integer productStatus;
 
-   /** 类目编号. */
-    @ColumnDefault("0")
-    private Integer categoryType;
+	@ColumnDefault("0")
+	private Integer categoryType;
 
-    //@CreationTimestamp
-    private Date createTime;
-    //@UpdateTimestamp
-    private Date updateTime;
+	private Date createTime;
+	private Date updateTime;
 
-    public ProductInfo() {
-    }
+	public ProductInfo() {
+	}
 }
