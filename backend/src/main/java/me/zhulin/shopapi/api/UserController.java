@@ -84,7 +84,8 @@ public class UserController {
     @GetMapping("/profile/{email}")
     public ResponseEntity<User> getProfile(@PathVariable("email") String email, Principal principal) {
         if (principal.getName().contains(email)) {
-            return ResponseEntity.ok(userService.findOne(email));
+        	ResponseEntity responseEntity = ResponseEntity.ok(userService.findOne(principal.getName()));
+            return responseEntity;
         } else {
             return ResponseEntity.badRequest().build();
         }
