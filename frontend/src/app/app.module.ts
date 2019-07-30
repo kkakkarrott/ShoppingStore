@@ -20,6 +20,12 @@ import {OrderDetailComponent} from './pages/order-detail/order-detail.component'
 import {ProductListComponent} from './pages/product-list/product.list.component';
 import {UserDetailComponent} from './pages/user-edit/user-detail.component';
 import {ProductEditComponent} from './pages/product-edit/product-edit.component';
+import { MyDialogComponent } from './my-dialog/my-dialog.component';
+import {MatDialogModule} from '@angular/material';
+import {MatCardModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material';
+import {ChatModule} from './chat/chat.module';
+
 
 @NgModule({
     declarations: [
@@ -36,19 +42,26 @@ import {ProductEditComponent} from './pages/product-edit/product-edit.component'
         ProductListComponent,
         UserDetailComponent,
         ProductEditComponent,
-
+        MyDialogComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
+        ChatModule,
+        MatCardModule,
+        MatButtonModule,
+        MatDialogModule
 
     ],
     providers: [CookieService,
         {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
         {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [
+    	MyDialogComponent
+    	]
 })
 export class AppModule {
 }

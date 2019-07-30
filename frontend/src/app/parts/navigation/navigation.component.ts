@@ -4,6 +4,8 @@ import {Subscription} from "rxjs";
 import {JwtResponse} from "../../response/JwtResponse";
 import {Router} from "@angular/router";
 import {Role} from "../../enum/Role";
+import {MatDialog} from '@angular/material';
+import { MyDialogComponent } from '../../my-dialog/my-dialog.component';
 
 @Component({
     selector: 'app-navigation',
@@ -21,7 +23,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
     Role = Role;
 
     constructor(private userService: UserService,
-                private router: Router,
+                private router: Router, public dialog: MatDialog
     ) {
 
     }
@@ -48,5 +50,18 @@ export class NavigationComponent implements OnInit, OnDestroy {
         this.userService.logout();
         // this.router.navigate(['/login'], {queryParams: {logout: 'true'}} );
     }
+    
+
+    openDialog() {
+        const dialogRef = this.dialog.open(MyDialogComponent, {
+          width: '600px',
+          height: '600px',
+          data: 'This text is passed into the dialog!'
+        });
+        dialogRef.afterClosed().subscribe(result => {
+          console.log(`Dialog closed: ${result}`);
+         // this.dialogResult = result;
+        });
+      }
 
 }
