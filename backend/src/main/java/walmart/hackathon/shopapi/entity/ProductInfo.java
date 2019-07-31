@@ -1,22 +1,22 @@
 package walmart.hackathon.shopapi.entity;
 
+import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicUpdate;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.DynamicUpdate;
-
-import lombok.Data;
-
 @Entity
 @Data
 @DynamicUpdate
+@Table(name = "product_info")
 public class ProductInfo implements Serializable {
 
 	private static final long serialVersionUID = 1L;

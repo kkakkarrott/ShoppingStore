@@ -1,20 +1,20 @@
 package walmart.hackathon.shopapi.entity;
 
-import java.io.Serializable;
-import java.util.Date;
+import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.NaturalId;
-
-import lombok.Data;
+import javax.persistence.Table;
+import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Data
 @DynamicUpdate
+@Table(name = "product_category")
 public class ProductCategory implements Serializable {
 
 	private static final long serialVersionUID = 1L;
