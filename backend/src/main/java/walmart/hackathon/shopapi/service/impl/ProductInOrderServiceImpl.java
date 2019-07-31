@@ -1,21 +1,17 @@
 package walmart.hackathon.shopapi.service.impl;
 
-import java.util.Optional;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicReference;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import walmart.hackathon.shopapi.entity.ProductInOrder;
 import walmart.hackathon.shopapi.entity.User;
 import walmart.hackathon.shopapi.repository.ProductInOrderRepository;
 import walmart.hackathon.shopapi.service.ProductInOrderService;
 
-/**
- * Created By Zhu Lin on 1/3/2019.
- */
+import java.util.Optional;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicReference;
+
 @Service
 public class ProductInOrderServiceImpl implements ProductInOrderService {
 

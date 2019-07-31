@@ -20,9 +20,6 @@ import walmart.hackathon.shopapi.security.JWT.JwtFilter;
 
 import javax.sql.DataSource;
 
-/**
- * Created By Zhu Lin on 1/1/2019.
- */
 @Configuration
 @EnableWebSecurity
 @DependsOn("passwordEncoder")

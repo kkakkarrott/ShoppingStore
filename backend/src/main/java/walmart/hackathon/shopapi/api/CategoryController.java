@@ -16,9 +16,6 @@ import walmart.hackathon.shopapi.service.CategoryService;
 import walmart.hackathon.shopapi.service.ProductService;
 import walmart.hackathon.shopapi.vo.response.CategoryPage;
 
-/**
- * Created By Zhu Lin on 3/10/2018.
- */
 @RestController
 @CrossOrigin
 public class CategoryController {

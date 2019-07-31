@@ -6,9 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import walmart.hackathon.shopapi.entity.ProductInfo;
 
-/**
- * Created By Zhu Lin on 3/10/2018.
- */
 public interface ProductInfoRepository extends JpaRepository<ProductInfo, String> {
     ProductInfo findByProductId(String id);
     // onsale product

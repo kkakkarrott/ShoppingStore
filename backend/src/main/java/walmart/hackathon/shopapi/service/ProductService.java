@@ -6,9 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 import walmart.hackathon.shopapi.entity.ProductInfo;
 
-/**
- * Created By Zhu Lin on 3/10/2018.
- */
 public interface ProductService {
 
     ProductInfo findOne(String productId);

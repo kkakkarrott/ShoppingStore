@@ -7,9 +7,6 @@ import walmart.hackathon.shopapi.entity.User;
 
 import java.util.Collection;
 
-/**
- * Created By Zhu Lin on 3/13/2018.
- */
 
 public interface UserRepository extends JpaRepository<User, String> {
     User findByEmail(String email);

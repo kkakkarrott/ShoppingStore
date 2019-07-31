@@ -1,14 +1,10 @@
 package walmart.hackathon.shopapi.form;
 
-import javax.validation.constraints.Min;
-
+import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import lombok.Data;
+import javax.validation.constraints.Min;
 
-/**
- * Created By Zhu Lin on 3/11/2018.
- */
 @Data
 public class ItemForm {
     @Min(value = 1)

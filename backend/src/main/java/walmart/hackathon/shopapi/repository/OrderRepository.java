@@ -7,9 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import walmart.hackathon.shopapi.entity.OrderMain;
 
-/**
- * Created By Zhu Lin on 3/14/2018.
- */
 public interface OrderRepository extends JpaRepository<OrderMain, Integer> {
     OrderMain findByOrderId(Long orderId);
 

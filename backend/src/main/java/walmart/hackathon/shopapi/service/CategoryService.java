@@ -1,12 +1,9 @@
 package walmart.hackathon.shopapi.service;
 
-import java.util.List;
-
 import walmart.hackathon.shopapi.entity.ProductCategory;
 
-/**
- * Created By Zhu Lin on 3/10/2018.
- */
+import java.util.List;
+
 public interface CategoryService {
 
     List<ProductCategory> findAll();

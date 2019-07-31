@@ -20,9 +20,6 @@ import walmart.hackathon.shopapi.repository.UserRepository;
 import walmart.hackathon.shopapi.service.OrderService;
 import walmart.hackathon.shopapi.service.ProductService;
 
-/**
- * Created By Zhu Lin on 3/14/2018.
- */
 @Service
 public class OrderServiceImpl implements OrderService {
     @Autowired

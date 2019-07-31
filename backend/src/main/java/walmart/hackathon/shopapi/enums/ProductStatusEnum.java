@@ -2,9 +2,6 @@ package walmart.hackathon.shopapi.enums;
 
 import lombok.Getter;
 
-/**
- * Created By Zhu Lin on 3/9/2018.
- */
 @Getter
 public enum ProductStatusEnum implements CodeEnum{
     UP(0, "Available"),

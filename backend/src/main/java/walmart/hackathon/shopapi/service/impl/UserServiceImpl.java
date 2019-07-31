@@ -1,14 +1,11 @@
 package walmart.hackathon.shopapi.service.impl;
 
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import walmart.hackathon.shopapi.entity.Cart;
 import walmart.hackathon.shopapi.entity.User;
 import walmart.hackathon.shopapi.enums.ResultEnum;
@@ -17,9 +14,8 @@ import walmart.hackathon.shopapi.repository.CartRepository;
 import walmart.hackathon.shopapi.repository.UserRepository;
 import walmart.hackathon.shopapi.service.UserService;
 
-/**
- * Created By Zhu Lin on 3/13/2018.
- */
+import java.util.Collection;
+
 @Service
 @DependsOn("passwordEncoder")
 public class UserServiceImpl implements UserService {

@@ -13,9 +13,6 @@ import walmart.hackathon.shopapi.service.CategoryService;
 
 import java.util.List;
 
-/**
- * Created By Zhu Lin on 3/10/2018.
- */
 @Service
 public class CategoryServiceImpl implements CategoryService {
     @Autowired

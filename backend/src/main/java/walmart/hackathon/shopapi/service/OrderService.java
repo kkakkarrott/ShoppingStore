@@ -6,10 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 import walmart.hackathon.shopapi.entity.OrderMain;
 
-/**
- * Created By Zhu Lin on 3/14/2018.
- */
-
 public interface OrderService {
     Page<OrderMain> findAll(Pageable pageable);
 

@@ -1,15 +1,9 @@
 package walmart.hackathon.shopapi.service.impl;
 
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import walmart.hackathon.shopapi.entity.Cart;
 import walmart.hackathon.shopapi.entity.OrderMain;
 import walmart.hackathon.shopapi.entity.ProductInOrder;
@@ -22,9 +16,11 @@ import walmart.hackathon.shopapi.service.CartService;
 import walmart.hackathon.shopapi.service.ProductService;
 import walmart.hackathon.shopapi.service.UserService;
 
-/**
- * Created By Zhu Lin on 3/11/2018.
- */
+import java.util.Collection;
+import java.util.Optional;
+import java.util.Set;
+
+
 @Service
 public class CartServiceImpl implements CartService {
     @Autowired

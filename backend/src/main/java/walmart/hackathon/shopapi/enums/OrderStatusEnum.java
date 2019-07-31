@@ -1,8 +1,5 @@
 package walmart.hackathon.shopapi.enums;
 
-/**
- * Created By Zhu Lin on 3/14/2018.
- */
 public enum OrderStatusEnum implements CodeEnum {
     NEW(0, "New OrderMain"),
     FINISHED(1, "Finished"),

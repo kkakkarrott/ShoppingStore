@@ -15,9 +15,6 @@ import walmart.hackathon.shopapi.repository.ProductInfoRepository;
 import walmart.hackathon.shopapi.service.CategoryService;
 import walmart.hackathon.shopapi.service.ProductService;
 
-/**
- * Created By Zhu Lin on 3/10/2018.
- */
 @Service
 public class ProductServiceImpl implements ProductService {
 
