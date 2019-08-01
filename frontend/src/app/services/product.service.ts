@@ -30,6 +30,15 @@ export class ProductService {
             // tap(data => console.log(data))
         );
     }
+    
+    
+    getProductInfoByName(productName: string, page: number, size: number): Observable<any> {
+        const url = `${this.productUrl}/byName/${productName}?page=${page}&size=${size}`;
+        return this.http.get(url)
+            .pipe(
+                // tap(_ => console.log(_)),
+            )
+    }
 
     getDetail(id: String): Observable<ProductInfo> {
         const url = `${this.productUrl}/${id}`;

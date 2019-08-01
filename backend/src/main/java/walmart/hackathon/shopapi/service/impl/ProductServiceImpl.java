@@ -126,5 +126,9 @@ public class ProductServiceImpl implements ProductService {
 
     }
 
-
+    @Override
+    public ProductInfo getProductInfoByProductName(String productName)
+    {
+   return productInfoRepository.findByProductName(productName);
+    }
 }

@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   dialogflow: {
-    angularBot: '9e61113ceee8402288eeb7000db1a015'
+    angularBot: '23bc174e200a443cb35ad2b231137e0a'
   }
 };
 export const apiUrl = '//localhost:8080';

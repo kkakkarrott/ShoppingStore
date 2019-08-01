@@ -78,5 +78,12 @@ public class ProductController {
         productService.delete(productId);
         return ResponseEntity.ok().build();
     }
+    
+
+    @GetMapping("/product/byname/{productname}")
+    public ResponseEntity getProductInfoByName(@PathVariable("id") String productName) {
+        productService.getProductInfoByProductName(productName);
+        return ResponseEntity.ok().build();
+    }
 
 }

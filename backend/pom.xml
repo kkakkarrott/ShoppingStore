@@ -7,8 +7,8 @@
     <artifactId>spring-boot-starter-parent</artifactId>  
     <version>1.5.21.RELEASE</version>  
     <relativePath/>  
-    <!-- lookup parent from repository --> 
-  </parent>  
+    <!-- lookup parent from repository -->   </parent>  
+
   <groupId>walmart.hackathon</groupId>  
   <artifactId>shop-api</artifactId>  
   <version>0.0.1-SNAPSHOT</version>  
@@ -31,8 +31,10 @@
       <artifactId>spring-boot-starter-security</artifactId> 
     </dependency>  
     <dependency> 
+
       <groupId>com.h2database</groupId>  
       <artifactId>h2</artifactId>  
+
       <scope>runtime</scope> 
     </dependency>  
     <dependency> 
@@ -92,6 +94,7 @@
               </resource> 
             </resources> 
           </deployment> 
+
         </configuration> 
       </plugin> 
     </plugins> 

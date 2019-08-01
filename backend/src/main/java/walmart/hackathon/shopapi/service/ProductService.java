@@ -32,5 +32,5 @@ public interface ProductService {
 
     void delete(String productId);
 
-
+    ProductInfo getProductInfoByProductName(String productName);
 }
